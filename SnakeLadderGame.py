@@ -28,3 +28,8 @@ def playernames():
     while not player2_name:
         player2_name = input("Enter name of second player: ").strip()
     return player1_name, player2_name
+def dice_value():
+    time.sleep(PAUSE)
+    dice_value = random.randint(1, DICE)
+    print("Its a " + str(dice_value))
+    return dice_value
