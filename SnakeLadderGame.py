@@ -41,3 +41,10 @@ def snake_bite(old_value, current_value, player_name):
 def ladder_jump(old_value, current_value, player_name):
     print("\n" + random.choice(ladder_jump).upper() )
     print("\n" + player_name + " climbed the ladder from " + str(old_value) + " to " + str(current_value))
+def check_win(player_name, position):
+    time.sleep(PAUSE)
+    if MAX_VAL == position:
+        print("\n\n\nThats it.\n\n" + player_name + " won the game.")
+        print("Congratulations " + player_name)
+
+        sys.exit(1)
