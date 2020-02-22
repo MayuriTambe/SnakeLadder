@@ -33,3 +33,11 @@ def dice_value():
     dice_value = random.randint(1, DICE)
     print("Its a " + str(dice_value))
     return dice_value
+def snake_bite(old_value, current_value, player_name):
+    print("\n" + random.choice(snake_bite).upper())
+    print("\n" + player_name + "  snake bite. Down from " + str(old_value) + " to " + str(current_value))
+
+
+def ladder_jump(old_value, current_value, player_name):
+    print("\n" + random.choice(ladder_jump).upper() )
+    print("\n" + player_name + " climbed the ladder from " + str(old_value) + " to " + str(current_value))
