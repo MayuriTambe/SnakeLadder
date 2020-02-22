@@ -70,3 +70,35 @@ def snake_ladder(player_name, current_value, dice_value):
         final_value = current_value
 
     return final_value
+def start():
+    welcome_msg()
+    time.sleep(PAUSE)
+    player1_name, player2_name = playernames()
+    time.sleep(PAUSE)
+
+    player1_current_position = 0
+    player2_current_position = 0
+
+    while True:
+        time.sleep(PAUSE)
+        input_1 = input("\n" + player1_name + ": " + random.choice(player_turn_text) + " Hit the enter to roll dice: ")
+        print("\nRolling dice...")
+        dice_value = dice_value()
+        time.sleep(PAUSE)
+        print(player1_name + " moving....")
+        player1_current_position = snake_ladder(player1_name, player1_current_position, dice_value)
+
+        check_win(player1_name, player1_current_position)
+
+        input_2 = input("\n" + player2_name + ": " + random.choice(player_turn_text) + " Hit the enter to roll dice: ")
+        print("\nRolling dice...")
+        dice_value = dice_value()
+        time.sleep(PAUSE)
+        print(player2_name + " moving....")
+        player2_current_position = snake_ladder(player2_name, player2_current_position, dice_value)
+
+        check_win(player2_name, player2_current_position)
+
+
+if __name__ == "__main__":
+    start()
